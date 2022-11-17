@@ -1,9 +1,9 @@
 resource "github_repository_file" "api" {
-  for_each            = toset(data.github_repositories.api.names)
+  for_each            = toset(data.github_repositories.python_api.names)
   repository          = each.key
   branch              = "main"
   file                = ".gitattributes"
-  content             = file("./res/api.gitattributes")
+  content             = file("./res/python_api.gitattributes")
   commit_message      = "Update .gitattributes"
   commit_author       = "github-actions"
   commit_email        = "github-actions[bot]@users.noreply.github.com"
@@ -11,11 +11,11 @@ resource "github_repository_file" "api" {
 }
 
 resource "github_repository_file" "cron_job" {
-  for_each            = toset(data.github_repositories.cron_job.names)
+  for_each            = toset(data.github_repositories.python_cron_job.names)
   repository          = each.key
   branch              = "main"
   file                = ".gitattributes"
-  content             = file("./res/cron_job.gitattributes")
+  content             = file("./res/python_cron_job.gitattributes")
   commit_message      = "Update .gitattributes"
   commit_author       = "github-actions"
   commit_email        = "github-actions[bot]@users.noreply.github.com"
@@ -23,11 +23,11 @@ resource "github_repository_file" "cron_job" {
 }
 
 resource "github_repository_file" "deployment" {
-  for_each            = toset(data.github_repositories.deployment.names)
+  for_each            = toset(data.github_repositories.python_deployment.names)
   repository          = each.key
   branch              = "main"
   file                = ".gitattributes"
-  content             = file("./res/deployment.gitattributes")
+  content             = file("./res/python_deployment.gitattributes")
   commit_message      = "Update .gitattributes"
   commit_author       = "github-actions"
   commit_email        = "github-actions[bot]@users.noreply.github.com"
@@ -35,11 +35,11 @@ resource "github_repository_file" "deployment" {
 }
 
 resource "github_repository_file" "package" {
-  for_each            = toset(data.github_repositories.package.names)
+  for_each            = toset(data.github_repositories.python_package.names)
   repository          = each.key
   branch              = "main"
   file                = ".gitattributes"
-  content             = file("./res/package.gitattributes")
+  content             = file("./res/python_package.gitattributes")
   commit_message      = "Update .gitattributes"
   commit_author       = "github-actions"
   commit_email        = "github-actions[bot]@users.noreply.github.com"

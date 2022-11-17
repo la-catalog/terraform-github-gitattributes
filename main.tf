@@ -18,20 +18,20 @@ provider "github" {
   read_delay_ms = 1000
 }
 
-data "github_repositories" "api" {
-  query = "org:la-catalog topic:api"
+data "github_repositories" "python_api" {
+  query = "org:la-catalog topic:python topic:api"
 }
 
-data "github_repositories" "cron_job" {
-  query = "org:la-catalog topic:cronjob"
+data "github_repositories" "python_cron_job" {
+  query = "org:la-catalog topic:python topic:cronjob"
 }
 
-data "github_repositories" "deployment" {
-  query = "org:la-catalog topic:deployment"
+data "github_repositories" "python_deployment" {
+  query = "org:la-catalog topic:python topic:deployment"
 }
 
-data "github_repositories" "package" {
-  query = "org:la-catalog topic:package"
+data "github_repositories" "python_package" {
+  query = "org:la-catalog topic:python topic:package"
 }
 
 data "github_repositories" "terraform" {
